@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Page(txt) {
+export default function Page({ txt }) {
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseOver = () => {
@@ -16,7 +16,7 @@ export default function Page(txt) {
     //creates an <editor> component within the page and
     //adds to current page
   }
-  function deletePage(){}
+  function deletePage() {}
   return (
     <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       {isHovering && (
