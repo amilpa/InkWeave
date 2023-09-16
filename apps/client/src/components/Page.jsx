@@ -1,48 +1,29 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
 import { Editor } from "novel";
 import { AiOutlinePlus } from "react-icons/ai";
 
-export default function Page({ txt, newPage, setNewPage }) {
+export default function Page({ newPage, setNewPage, content, pgNo }) {
   //default value
   const defaultContent = {
     type: "doc",
     content: [],
   };
 
-  const [isHovering, setIsHovering] = useState(false);
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
-
-  function seeDetails() {}
-  function editPage() {
-    //creates an <editor> component within the page and
-    //adds to current page
-  }
   function addPage() {
-    if (!newPage) setNewPage(true);
-    setPgCount(pgCount + 1);
+    if (newPage.id === 0) setNewPage({ id: pgNo });
+    // setPgCount(pgCount + 1);
   }
 
-  function deletePage() {}
   return (
     <>
-      <div
-        className="relative min-h-[500px] mx-auto mb-8 p-6 w-full max-w-screen-lg bg-gray-800 border-stone-200 sm:rounded-lg sm:border sm:shadow-lg"
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-      >
+      <div className="relative min-h-[500px] mx-auto mb-8 p-6 w-full max-w-screen-lg bg-gray-800 border-stone-200 sm:rounded-lg sm:border sm:shadow-lg">
         {/* {isHovering && (
         <div>
           <button onClick={seeDetails}></button>
           <button onClick={editPage}></button>
         </div>
       )} */}
-        <div className="text-lg">{txt}</div>
+        <div className="text-lg">{content}</div>
         <button
           onClick={addPage}
           type="button"
@@ -51,7 +32,7 @@ export default function Page({ txt, newPage, setNewPage }) {
           <AiOutlinePlus />
         </button>
       </div>
-      {newPage && (
+      {newPage.id == pgNo && (
         <Editor
           className="relative min-h-[500px] w-full max-w-screen-lg text-white border-stone-200 bg-gray-800 sm:mx-auto sm:mb-8 sm:rounded-lg sm:border sm:shadow-lg"
           defaultValue={defaultContent}

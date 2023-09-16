@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 export default function Chapters() {
   const chapters = [
     {
@@ -20,16 +21,17 @@ export default function Chapters() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 mt-8">
       {chapters.map((value) => {
         return (
-          <div
+          <Link
+            to={{ pathname: "/editor", state: { chapterNo: value.id } }}
             key={value.id}
             className="flex justify-between px-6 border border-gray-400"
           >
             <p>Chapter {value.id}</p>
             <p>{value.timestamp}</p>
-          </div>
+          </Link>
         );
       })}
     </div>
