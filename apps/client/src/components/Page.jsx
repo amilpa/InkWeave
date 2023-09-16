@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Editor from "../routes/Editor";
+import { Editor } from "novel";
 import { AiOutlinePlus } from "react-icons/ai";
 
-export default function Page({ txt ,newPage,setNewPage}) { 
+export default function Page({ txt, newPage, setNewPage }) {
   //default value
   const defaultContent = {
     type: "doc",
@@ -24,8 +24,7 @@ export default function Page({ txt ,newPage,setNewPage}) {
     //adds to current page
   }
   function addPage() {
-    if(!newPage)
-    setNewPage(true);
+    if (!newPage) setNewPage(true);
     setPgCount(pgCount + 1);
   }
 
