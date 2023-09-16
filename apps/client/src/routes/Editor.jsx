@@ -1,8 +1,10 @@
-
-import React from 'react'
+import WritingArea from "../components/WritingArea";
+import React from "react";
 
 export default function Editor() {
   return (
-    <div>Editor</div>
-  )
+    <div>
+      <WritingArea />
+    </div>
+  );
 }
