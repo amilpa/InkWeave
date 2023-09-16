@@ -7,6 +7,7 @@ import Private from "./utils/Private";
 
 import { Navigate, Routes, Route } from "react-router-dom";
 import Login from "./routes/Login";
+import Chapters from "./components/Chapters";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       {/* <Route element={<Private redirect={"/login"} />}> */}
       <Route element={<Navbar />}>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/book" element={<Chapters />} />
         <Route path="/editor" element={<Editor />} />
         <Route path="/" element={<Navigate to={"/dashboard"} />} />
       </Route>
