@@ -1,11 +1,13 @@
-
 import Editor from "./routes/Editor";
-import {Routes,Route} from "react-router-dom"
+import NotFound from "./routes/NotFound";
+
+import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <Routes>
-      <Route to="/editor" element={<Editor/>}/>
-      
+      <Route path="/editor" element={<Editor />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
