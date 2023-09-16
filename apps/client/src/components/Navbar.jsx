@@ -59,13 +59,20 @@ export default function Navbar() {
             className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
           >
             <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7">
-              <button
-                className="flex items-center gap-x-2 font-semibold text-gray-500 hover:text-blue-600 sm:border-l sm:border-black sm:dark:border-gray-300 sm:my-6 sm:pl-6 dark:border-gray-700 dark:text-gray-200 dark:hover:text-blue-500"
-                onClick={handleClick}
-              >
-                <FiLogOut className="text-red-600 dark:text-red-400" />
-                Log out
-              </button>
+              <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:pl-7">
+                <img
+                  className="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-gray-800"
+                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80"
+                  alt="Image Description"
+                />
+                <button
+                  className="flex items-center gap-x-2 font-semibold text-gray-500 hover:text-blue-600 sm:border-l sm:border-black sm:dark:border-gray-300 sm:my-6 sm:pl-6 dark:border-gray-700 dark:text-gray-200 dark:hover:text-blue-500"
+                  onClick={handleClick}
+                >
+                  <FiLogOut className="text-red-600 dark:text-red-400" />
+                  Log out
+                </button>
+              </div>
             </div>
           </div>
         </nav>
