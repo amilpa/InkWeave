@@ -14,11 +14,11 @@ With InkWeave, you can unleash your imagination and work seamlessly with others 
 
 ## Link to product walkthrough
 
-[link to video](Link Here)
+[Click here](https://www.youtube.com/watch?v=MpvrDLOVI1k)
 
 ## How it Works ?
 
-1.  Explaining the working of project
+1.  This system allows for collaborative writing by maintaining different versions of the same story. Artificial intelligence is used to automatically generate different storylines based on the previous context of the story. To keep track of all these different paths, we use multi-level indexing.(Backend is still under development due to complexity of the app)
 2.  Embed video of project demo
 
 ## Libraries used
