@@ -14,7 +14,7 @@ With InkWeave, you can unleash your imagination and work seamlessly with others 
 
 ## Link to product walkthrough
 
-[Click here](https://www.youtube.com/watch?v=MpvrDLOVI1k){:target="\_blank"}
+<a href="https://www.youtube.com/watch?v=MpvrDLOVI1k" target="_blank">Click here</a>
 
 ## How it Works ?
 
